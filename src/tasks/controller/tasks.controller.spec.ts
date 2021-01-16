@@ -1,5 +1,5 @@
-import {TasksService} from '../services/tasks.service';
 import {Test, TestingModule} from '@nestjs/testing';
+import {TasksService} from '../services/tasks.service';
 import {TasksController} from './tasks.controller';
 
 describe('TasksController', () => {
@@ -16,5 +16,12 @@ describe('TasksController', () => {
 
   it('should be defined', () => {
     expect(controller).toBeDefined();
+  });
+
+  it('should return tasks data as an array', () => {
+    const tasksData = controller.getAllTasks();
+
+    expect(tasksData.length).toBeDefined();
+    expect(typeof tasksData.length).toBe('number');
   });
 });

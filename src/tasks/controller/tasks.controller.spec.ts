@@ -1,4 +1,4 @@
-import {TasksService} from './tasks.service';
+import {TasksService} from '../services/tasks.service';
 import {Test, TestingModule} from '@nestjs/testing';
 import {TasksController} from './tasks.controller';
 

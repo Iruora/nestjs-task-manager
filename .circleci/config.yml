@@ -36,7 +36,7 @@ jobs:
       - node/install-packages
       - run:
           name: Run lint
-          command: npm lint
+          command: npm run lint
 workflows:
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.

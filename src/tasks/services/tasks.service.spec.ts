@@ -15,4 +15,11 @@ describe('TasksService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+  it('should return tasks data as an array', () => {
+    const tasksData = service.getAllTasks();
+
+    expect(tasksData.length).toBeDefined();
+    expect(typeof tasksData.length).toBe('number');
+  });
 });
